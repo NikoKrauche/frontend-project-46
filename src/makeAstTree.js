@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import formator from './formator.js';
 
 const getDiffTree = (data1, data2) => {
   const sortedKeys = _.sortBy(Object.keys({ ...data1, ...data2 }));
@@ -12,7 +11,7 @@ const getDiffTree = (data1, data2) => {
     return { key, value: data1[key], status: 'unchanged' };
   });
 
-  return formator(result);
+  return result;
 };
 
 export default getDiffTree;
