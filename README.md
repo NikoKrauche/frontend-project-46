@@ -7,7 +7,7 @@
 
 [![asciinema](https://gravatar.com/avatar/0b5be33f3e4e1f683cacfe572991cdd8?s=128&d=retro)](https://asciinema.org/~NikoKrauch)
 ***
-* [Сравнение плоских файлов (JSON)](https://asciinema.org/a/AVR0hzp5hhCwF5Lp7ZRf8hTsh)
+* [Сравнение плоских файлов (JSON)](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy)
  Команда: ```make test```
 
 ***
