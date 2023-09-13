@@ -10,8 +10,11 @@ jobs:
       - run: make install
       - run: make lint
       - run: make test
-      - name: Run test
-        uses: 
+      - name: Publish code coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          node-version: '14'
-
+          coverageCommand: make test-coverage
+          coverageLocations: ${{github.workplace}}/build/logs/clover.xml:clover
+          debug: true

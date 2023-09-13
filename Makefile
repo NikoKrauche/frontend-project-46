@@ -18,3 +18,6 @@ test:
 
 testwatch:
 	npm run test -- --watch
+
+test-coverage:
+	npx jest --coverage
