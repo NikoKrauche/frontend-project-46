@@ -7,11 +7,8 @@ publish:
 lint:
 	npx eslint .
 
-start:
+help:
 	gendiff -h
-
-testJSON:
-	gendiff __fixtures__/file1.json __fixtures__/file2.json
 
 test:
 	npm run test
