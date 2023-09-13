@@ -1,5 +1,5 @@
 [![Actions Status](https://github.com/NikoKrauche/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/NikoKrauche/frontend-project-46/actions)
-[![Build Status](https://github.com/NikoKrauche/frontend-project-46/actions/workflows/chechs.yml/badge.svg)](https://github.com/NikoKrauche/frontend-project-46/actions/workflows/chechs.yml)
+[![Build Status](https://github.com/NikoKrauche/frontend-project-46/actions/workflows/checks.yml/badge.svg)](https://github.com/NikoKrauche/frontend-project-46/actions/workflows/checks.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2553f751350c248f03bb/maintainability)](https://codeclimate.com/github/NikoKrauche/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2553f751350c248f03bb/test_coverage)](https://codeclimate.com/github/NikoKrauche/frontend-project-46/test_coverage)
 
