@@ -5,12 +5,18 @@
 
 # Difference generator
 
-> «Вычислитель отличий» — 
+> Вычислитель отличий – программа, определяющая разницу между двумя структурами данных
+Возможности утилиты:
+* Поддержка разных входных форматов: yaml, json
+* Генерация отчета в виде plain text, stylish и json
 
 [![asciinema](https://gravatar.com/avatar/0b5be33f3e4e1f683cacfe572991cdd8?s=128&d=retro)](https://asciinema.org/~NikoKrauch)
 ***
-* [Сравнение плоских файлов (JSON)](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy)
- Команда: ```make test```
+* [Сравнение плоских файлов (json)](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy)
+ Команда: ```make json```
+
+ * [Сравнение плоских файлов (yml)](https://asciinema.org/a/KbvtKp79T2NMqgRIDAuOVYFZQ)
+ Команда: ```make yml```
 
 ***
   [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://ru.hexlet.io/u/nikokrauch)
