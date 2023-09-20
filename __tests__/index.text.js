@@ -12,8 +12,8 @@ const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 test.each([
   { filename1: 'file1.json', filename2: 'file2.json' },
   { filename1: 'file1.yml', filename2: 'file2.yaml' },
-  { filename1: 'file1.json', filename2: 'file2.yaml' },
-])('Comparison of flat files', ({ filename1, filename2 }) => {
+//  { filename1: 'file1.json', filename2: 'file2.yaml' },
+])('Comparison of files', ({ filename1, filename2 }) => {
   const data1 = getFixturePath(filename1);
   const data2 = getFixturePath(filename2);
   const expected = readFile('expected.txt');

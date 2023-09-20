@@ -4,6 +4,12 @@ const getDiffTree = (data1, data2) => {
   const sortedKeys = _.sortBy(Object.keys({ ...data1, ...data2 }));
 
   const result = sortedKeys.map((key) => {
+    if (data1[key] && data2[key]) {
+      if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+        const children = getDiffTree(data1[key], data2[key]);
+        return { key, children, status: 'nested' };
+      }
+    }
     if (!Object.hasOwn(data1, key)) {
       return {
         key, value: data2[key], status: 'added',
