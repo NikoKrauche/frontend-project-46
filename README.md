@@ -29,5 +29,8 @@
 * [Плоский формат вывода](https://asciinema.org/a/jVA9yASSX58vOqrcLJz0uOMCZ)
  Команда: ```make plain```
 
+* [Формат вывода json](https://asciinema.org/a/M8Ulc3J2e0s1MqS6VMOLZzT8R)
+ Команда: ```make json-f```
+
 ***
   [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://ru.hexlet.io/u/nikokrauch)

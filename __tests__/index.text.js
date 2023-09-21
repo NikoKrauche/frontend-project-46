@@ -22,6 +22,12 @@ test.each([
     format: 'plain',
     expected: 'plaine.txt',
   },
+  {
+    filename1: 'file1.json',
+    filename2: 'file2.yaml',
+    format: 'json',
+    expected: 'json.txt',
+  },
 ])('Comparison of files', ({
   filename1, filename2, format, expected,
 }) => {

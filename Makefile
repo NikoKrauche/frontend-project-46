@@ -30,3 +30,6 @@ stylish:
 
 plain:
 	gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
+
+json-f:
+	gendiff --format json __fixtures__/file1.json __fixtures__/file2.json
