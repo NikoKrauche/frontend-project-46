@@ -24,3 +24,9 @@ json:
 
 yml:
 	gendiff __fixtures__/file1.yml __fixtures__/file2.yaml
+
+stylish:
+	gendiff --format stylish __fixtures__/file1.json __fixtures__/file2.json
+
+plain:
+	gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json

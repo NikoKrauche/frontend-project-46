@@ -2,7 +2,7 @@ import path from 'path';
 import { readFileSync } from 'node:fs';
 import getParsedData from './parser.js';
 import getDiffTree from './makeAstTree.js';
-import formator from './formator/index.js';
+import formator from './formatters/index.js';
 
 const readFile = (filepath) => readFileSync(path.resolve(filepath));
 const getExt = (filepath) => path.extname(filepath);
