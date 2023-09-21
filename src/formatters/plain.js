@@ -2,10 +2,10 @@ const getSuitableValue = (value) => {
   switch (toString.call(value)) {
     case '[object Boolean]':
     case '[object Null]': return value;
-    case '[object Number]': return `'${value}'`;
+    case '[object Number]': return value;
     case '[object String]': return `'${value}'`;
     case '[object Object]': return '[complex value]';
-    default: throw new Error(`Unknown object type: ${value}`);
+    default: throw new Error(`Unknown object type: ${toString.call(value)}`);
   }
 };
 
