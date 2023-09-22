@@ -6,6 +6,7 @@
 # Compares two configuration files and shows a difference
 
 > Вычислитель отличий – программа, определяющая разницу между двумя структурами данных
+
 Возможности утилиты:
 * Поддержка разных входных форматов: yaml, json
 * Генерация отчета в виде plain text, stylish и json
