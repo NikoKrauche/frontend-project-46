@@ -12,8 +12,9 @@
 * Генерация отчета в виде plain text, stylish и json
 
 > Установка и вызов помощи по программе
- Команда: ```make install```
- Команда: ```make help```
+
+  Команда: ```make install```
+  Команда: ```make help```
 
 [![asciinema](https://gravatar.com/avatar/0b5be33f3e4e1f683cacfe572991cdd8?s=128&d=retro)](https://asciinema.org/~NikoKrauch)
 ***
