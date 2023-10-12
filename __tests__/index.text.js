@@ -14,26 +14,26 @@ test.each([
     filename1: 'file1.json',
     filename2: 'file2.json',
     format: 'stylish',
-    expected: 'stylish.txt',
+    fixture: 'stylish.txt',
   },
   {
     filename1: 'file1.yml',
     filename2: 'file2.yaml',
     format: 'plain',
-    expected: 'plaine.txt',
+    fixture: 'plaine.txt',
   },
   {
     filename1: 'file1.json',
     filename2: 'file2.yaml',
     format: 'json',
-    expected: 'json.txt',
+    fixture: 'json.txt',
   },
 ])('Comparison of files', ({
-  filename1, filename2, format, expected,
+  filename1, filename2, format, fixture,
 }) => {
   const data1 = getFixturePath(filename1);
   const data2 = getFixturePath(filename2);
-  const exp = readFile(expected);
+  const expected = readFile(fixture);
 
-  expect(genDiff(data1, data2, format)).toBe(exp);
+  expect(genDiff(data1, data2, format)).toBe(expected);
 });
