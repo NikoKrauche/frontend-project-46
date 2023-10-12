@@ -25,21 +25,21 @@
 [![asciicast_flat_yml](https://asciinema.org/a/KbvtKp79T2NMqgRIDAuOVYFZQ.svg)](https://asciinema.org/a/KbvtKp79T2NMqgRIDAuOVYFZQ)
 
 * Сравнение вложенных файлов (json)
-Команда: ```make json```
+> Команда: ```make json```
 [![asciicast_attached_json](https://asciinema.org/a/MIjWfkBtfH3iJjZMwjMrPHIFD.svg)](https://asciinema.org/a/MIjWfkBtfH3iJjZMwjMrPHIFD)
 
 
 * Сравнение вложенных файлов (yml)
-Команда: ```make yml```
+> Команда: ```make yml```
 [![asciicast_attached_yml](https://asciinema.org/a/ckmWR7UTf0veYMeVqGKHiSohY.svg)](https://asciinema.org/a/ckmWR7UTf0veYMeVqGKHiSohY)
 
 
 * Плоский формат вывода
-Команда: ```make plain```
+> Команда: ```make plain```
 [![asciicast_plain_formatter](https://asciinema.org/a/jVA9yASSX58vOqrcLJz0uOMCZ.svg)](https://asciinema.org/a/jVA9yASSX58vOqrcLJz0uOMCZ)
 
 * Формат вывода json
-Команда: ```make json-f```
+> Команда: ```make json-f```
 [![asciicast_json_formatter](https://asciinema.org/a/M8Ulc3J2e0s1MqS6VMOLZzT8R.svg)](https://asciinema.org/a/M8Ulc3J2e0s1MqS6VMOLZzT8R)
 
 ***
