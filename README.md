@@ -18,7 +18,7 @@
 
 [![asciinema](https://gravatar.com/avatar/0b5be33f3e4e1f683cacfe572991cdd8?s=128&d=retro)](https://asciinema.org/~NikoKrauch)
 ***
-* [Сравнение плоских файлов (json)](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy)
+* [![asciicast](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy.svg)](https://asciinema.org/a/xY7S6y1VeWCNlBNAFhkNxtImy)
 
 * [Сравнение плоских файлов (yml)](https://asciinema.org/a/KbvtKp79T2NMqgRIDAuOVYFZQ)
 
