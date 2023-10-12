@@ -5,8 +5,8 @@ import getDiffTree from './makeAstTree.js';
 import formator from './formatters/index.js';
 
 const readFile = (filepath) => readFileSync(path.resolve(filepath));
-const getExt = (filepath) => path.extname(filepath);
-const getData = (filepath) => getParsedData(readFile(filepath), getExt(filepath));
+const getExtension = (filepath) => path.extname(filepath).slice(1);
+const getData = (filepath) => getParsedData(readFile(filepath), getExtension(filepath));
 
 const genDiff = (filepath1, filepath2, format = 'stylish') => {
   const data1 = getData(filepath1);
