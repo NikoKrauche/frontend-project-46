@@ -1,32 +1,30 @@
-const getSuitableValue = (value) => {
-  switch (toString.call(value)) {
-    case '[object Boolean]':
-    case '[object Null]': return value;
-    case '[object Number]': return value;
-    case '[object String]': return `'${value}'`;
-    case '[object Object]': return '[complex value]';
-    default: throw new Error(`Unknown object type: ${toString.call(value)}`);
-  }
+const stringify = (value) => {
+  if (typeof value === 'object' && value !== null) return '[complex value]';
+  if (typeof value === 'string') return `'${value}'`;
+  return value;
 };
 
-const makePlain = (keys, path = '') => {
-  const result = keys
-    .filter((key) => key.status !== 'unchanged')
-    .map((node) => {
-      const accPath = `${path}${node.key}`;
-      switch (node.status) {
-        case 'nested':
-          return makePlain(node.children, `${accPath}.`);
-        case 'added':
-          return `Property '${accPath}' was added with value: ${getSuitableValue(node.value)}`;
-        case 'deleted':
-          return `Property '${accPath}' was removed`;
-        case 'changed':
-          return `Property '${accPath}' was updated. From ${getSuitableValue(node.value1)} to ${getSuitableValue(node.value2)}`;
-        default: throw new Error(`Unknown key status: ${node.status}`);
-      }
-    });
-  return result.join('\n');
+const makePlain = (data) => {
+  const iter = (keys, path = '') => {
+    const result = keys
+      .filter((key) => key.status !== 'unchanged')
+      .map((node) => {
+        const accPath = `${path}${node.key}`;
+        switch (node.status) {
+          case 'nested':
+            return iter(node.children, `${accPath}.`);
+          case 'added':
+            return `Property '${accPath}' was added with value: ${stringify(node.value)}`;
+          case 'deleted':
+            return `Property '${accPath}' was removed`;
+          case 'changed':
+            return `Property '${accPath}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
+          default: throw new Error(`Unknown key status: ${node.status}`);
+        }
+      });
+    return result.join('\n');
+  };
+  return iter(data);
 };
 
 export default makePlain;
