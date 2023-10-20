@@ -7,10 +7,11 @@ const stringify = (value) => {
 const makePlain = (data) => {
   const iter = (keys, path = '') => {
     const result = keys
-      .filter((key) => key.status !== 'unchanged')
       .map((node) => {
         const accPath = `${path}${node.key}`;
         switch (node.status) {
+          case 'unchanged':
+            return '';
           case 'nested':
             return iter(node.children, `${accPath}.`);
           case 'added':
@@ -21,7 +22,8 @@ const makePlain = (data) => {
             return `Property '${accPath}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
           default: throw new Error(`Unknown key status: ${node.status}`);
         }
-      });
+      })
+      .filter((key) => key !== '');
     return result.join('\n');
   };
   return iter(data);
