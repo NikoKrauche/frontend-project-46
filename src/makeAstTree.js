@@ -3,11 +3,11 @@ import _ from 'lodash';
 const getDiffTree = (data1, data2) => {
   const sortedKeys = _.sortBy(Object.keys({ ...data1, ...data2 }));
   const result = sortedKeys.map((key) => {
-    let children;
     switch (true) {
-      case (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])):
-        children = getDiffTree(data1[key], data2[key]);
+      case (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])): {
+        const children = getDiffTree(data1[key], data2[key]);
         return { key, children, status: 'nested' };
+      }
       case (!Object.hasOwn(data1, key)):
         return { key, value: data2[key], status: 'added' };
       case (!Object.hasOwn(data2, key)):
