@@ -6,18 +6,18 @@ const getDiffTree = (data1, data2) => {
     switch (true) {
       case (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])): {
         const children = getDiffTree(data1[key], data2[key]);
-        return { key, children, status: 'nested' };
+        return { key, children, type: 'nested' };
       }
       case (!Object.hasOwn(data1, key)):
-        return { key, value: data2[key], status: 'added' };
+        return { key, value: data2[key], type: 'added' };
       case (!Object.hasOwn(data2, key)):
-        return { key, value: data1[key], status: 'deleted' };
+        return { key, value: data1[key], type: 'deleted' };
       case (!_.isEqual(data1[key], data2[key])):
         return {
-          key, value1: data1[key], value2: data2[key], status: 'changed',
+          key, value1: data1[key], value2: data2[key], type: 'changed',
         };
       case (_.isEqual(data1[key], data2[key])):
-        return { key, value: data1[key], status: 'unchanged' };
+        return { key, value: data1[key], type: 'unchanged' };
       default:
         throw new Error(`The '${key}' does not fit the condition`);
     }

@@ -8,7 +8,7 @@ const makePlain = (data) => {
   const iter = (keys, path = '') => {
     const result = keys.map((node) => {
       const accPath = `${path}${node.key}`;
-      switch (node.status) {
+      switch (node.type) {
         case 'unchanged':
           return null;
         case 'nested':
@@ -19,7 +19,7 @@ const makePlain = (data) => {
           return `Property '${accPath}' was removed`;
         case 'changed':
           return `Property '${accPath}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
-        default: throw new Error(`Unknown key status: ${node.status}`);
+        default: throw new Error(`Unknown type: ${node.type}`);
       }
     })
       .filter((key) => key !== null);

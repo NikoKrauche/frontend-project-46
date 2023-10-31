@@ -13,7 +13,7 @@ const stringify = (data, depth) => {
 const makeStylish = (data) => {
   const iter = (keys, depth = 1) => {
     const result = keys.map((node) => {
-      switch (node.status) {
+      switch (node.type) {
         case 'nested':
           return `${getIndent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1)}\n${getIndent(depth)}  }`;
         case 'added':
@@ -27,7 +27,7 @@ const makeStylish = (data) => {
           ].join('\n');
         case 'unchanged':
           return `${getIndent(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
-        default: throw new Error(`Unknown key status: ${node.status}`);
+        default: throw new Error(`Unknown type: ${node.type}`);
       }
     });
     return result.join('\n');
